@@ -1,3 +1,5 @@
+Forked from: https://github.com/amazon-science/tgl
+
 # TGL: A General Framework for Temporal Graph Training on Billion-Scale Graphs
 
 ## Overview
