@@ -112,7 +112,7 @@ if not os.path.isfile('embs/' + emb_file_name):
                     if memory_param['deliver_to'] == 'neighbors':
                         block = to_dgl_blocks(ret, sample_param['history'], reverse=True)[0][0]
                     mailbox.update_mailbox(model.memory_updater.last_updated_nid, model.memory_updater.last_updated_memory, root_nodes, ts, mem_edge_feats, block)
-                    mailbox.update_memory(model.memory_updater.last_updated_nid, model.memory_updater.last_updated_memory, model.memory_updater.last_updated_ts)
+                    mailbox.update_memory(model.memory_updater.last_updated_nid, model.memory_updater.last_updated_memory, root_nodes, model.memory_updater.last_updated_ts)
             processed_edge_id += train_param['batch_size']
             if processed_edge_id >= len(df):
                 return
